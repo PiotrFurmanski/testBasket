@@ -11,6 +11,12 @@
 		6F3EA24F2277B387009F6354 /* ShopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3EA24E2277B387009F6354 /* ShopViewCell.swift */; };
 		6F85AB5E2278E3F6006FDC6A /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85AB5D2278E3F6006FDC6A /* UITextField+Extension.swift */; };
 		6F85AB612278E6EE006FDC6A /* ShopCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85AB602278E6EE006FDC6A /* ShopCellPresenter.swift */; };
+		6F85AB642278F1B6006FDC6A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85AB632278F1B6006FDC6A /* UIButton+Extension.swift */; };
+		6F85AB662278F52C006FDC6A /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85AB652278F52C006FDC6A /* BasketViewController.swift */; };
+		6F85AB702278F6CB006FDC6A /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85AB6F2278F6CB006FDC6A /* BasketPresenter.swift */; };
+		6F85AB722278FB76006FDC6A /* BasketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85AB712278FB76006FDC6A /* BasketCell.swift */; };
+		6F85AB742279018E006FDC6A /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85AB732279018E006FDC6A /* CurrencyCell.swift */; };
+		6F85AB7622790341006FDC6A /* CurrencyPairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85AB7522790341006FDC6A /* CurrencyPairModel.swift */; };
 		6F8A4D8022765A24009E2865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A4D7F22765A24009E2865 /* AppDelegate.swift */; };
 		6F8A4D8222765A24009E2865 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A4D8122765A24009E2865 /* ShopViewController.swift */; };
 		6F8A4D8522765A24009E2865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A4D8322765A24009E2865 /* Main.storyboard */; };
@@ -45,6 +51,12 @@
 		6F3EA24E2277B387009F6354 /* ShopViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewCell.swift; sourceTree = "<group>"; };
 		6F85AB5D2278E3F6006FDC6A /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		6F85AB602278E6EE006FDC6A /* ShopCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCellPresenter.swift; sourceTree = "<group>"; };
+		6F85AB632278F1B6006FDC6A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		6F85AB652278F52C006FDC6A /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		6F85AB6F2278F6CB006FDC6A /* BasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPresenter.swift; sourceTree = "<group>"; };
+		6F85AB712278FB76006FDC6A /* BasketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCell.swift; sourceTree = "<group>"; };
+		6F85AB732279018E006FDC6A /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		6F85AB7522790341006FDC6A /* CurrencyPairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairModel.swift; sourceTree = "<group>"; };
 		6F8A4D7C22765A24009E2865 /* testBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8A4D7F22765A24009E2865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F8A4D8122765A24009E2865 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6F85AB5D2278E3F6006FDC6A /* UITextField+Extension.swift */,
+				6F85AB632278F1B6006FDC6A /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -111,6 +124,71 @@
 				6F3EA24E2277B387009F6354 /* ShopViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6F85AB672278F53B006FDC6A /* ShopList */ = {
+			isa = PBXGroup;
+			children = (
+				6F8A4DAE22765AD1009E2865 /* Models */,
+				6F85AB6A2278F58B006FDC6A /* ViewControlers */,
+				6F85AB5F2278E6C3006FDC6A /* Presenters */,
+				6F85AB622278E7D0006FDC6A /* Views */,
+			);
+			path = ShopList;
+			sourceTree = "<group>";
+		};
+		6F85AB682278F541006FDC6A /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				6F8A4DAD22765AC5009E2865 /* Services */,
+				6F85AB6E2278F5D2006FDC6A /* Presenters */,
+				6F85AB6D2278F5CC006FDC6A /* Views */,
+				6F85AB6C2278F5C4006FDC6A /* ViewControlers */,
+				6F85AB6B2278F5AF006FDC6A /* Models */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		6F85AB6A2278F58B006FDC6A /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				6F8A4D8122765A24009E2865 /* ShopViewController.swift */,
+			);
+			path = ViewControlers;
+			sourceTree = "<group>";
+		};
+		6F85AB6B2278F5AF006FDC6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F8A4DB12276600C009E2865 /* CurrencyPairs.swift */,
+				6F85AB7522790341006FDC6A /* CurrencyPairModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F85AB6C2278F5C4006FDC6A /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				6F85AB652278F52C006FDC6A /* BasketViewController.swift */,
+			);
+			path = ViewControlers;
+			sourceTree = "<group>";
+		};
+		6F85AB6D2278F5CC006FDC6A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F85AB712278FB76006FDC6A /* BasketCell.swift */,
+				6F85AB732279018E006FDC6A /* CurrencyCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F85AB6E2278F5D2006FDC6A /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				6F85AB6F2278F6CB006FDC6A /* BasketPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		6F8A4D7322765A24009E2865 = {
@@ -136,13 +214,10 @@
 		6F8A4D7E22765A24009E2865 /* testBasket */ = {
 			isa = PBXGroup;
 			children = (
-				6F85AB622278E7D0006FDC6A /* Views */,
-				6F85AB5F2278E6C3006FDC6A /* Presenters */,
+				6F85AB682278F541006FDC6A /* Basket */,
+				6F85AB672278F53B006FDC6A /* ShopList */,
 				6F85AB5C2278E3E4006FDC6A /* Extensions */,
-				6F8A4DAE22765AD1009E2865 /* Models */,
-				6F8A4DAD22765AC5009E2865 /* Services */,
 				6F8A4D7F22765A24009E2865 /* AppDelegate.swift */,
-				6F8A4D8122765A24009E2865 /* ShopViewController.swift */,
 				6F8A4D8322765A24009E2865 /* Main.storyboard */,
 				6F8A4D8622765A26009E2865 /* Assets.xcassets */,
 				6F8A4D8822765A26009E2865 /* LaunchScreen.storyboard */,
@@ -180,7 +255,6 @@
 		6F8A4DAE22765AD1009E2865 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6F8A4DB12276600C009E2865 /* CurrencyPairs.swift */,
 				6F3EA24C2277B0CD009F6354 /* ShopItem.swift */,
 			);
 			path = Models;
@@ -319,11 +393,17 @@
 			files = (
 				6F85AB612278E6EE006FDC6A /* ShopCellPresenter.swift in Sources */,
 				6F8A4DB22276600C009E2865 /* CurrencyPairs.swift in Sources */,
+				6F85AB702278F6CB006FDC6A /* BasketPresenter.swift in Sources */,
 				6F3EA24F2277B387009F6354 /* ShopViewCell.swift in Sources */,
+				6F85AB742279018E006FDC6A /* CurrencyCell.swift in Sources */,
+				6F85AB642278F1B6006FDC6A /* UIButton+Extension.swift in Sources */,
 				6F8A4D8222765A24009E2865 /* ShopViewController.swift in Sources */,
 				6F3EA24D2277B0CD009F6354 /* ShopItem.swift in Sources */,
 				6F8A4D8022765A24009E2865 /* AppDelegate.swift in Sources */,
+				6F85AB662278F52C006FDC6A /* BasketViewController.swift in Sources */,
 				6F85AB5E2278E3F6006FDC6A /* UITextField+Extension.swift in Sources */,
+				6F85AB722278FB76006FDC6A /* BasketCell.swift in Sources */,
+				6F85AB7622790341006FDC6A /* CurrencyPairModel.swift in Sources */,
 				6F8A4DB022765E82009E2865 /* CurrencyService.swift in Sources */,
 				6F8A4DB42276695D009E2865 /* ShopPresenter.swift in Sources */,
 			);

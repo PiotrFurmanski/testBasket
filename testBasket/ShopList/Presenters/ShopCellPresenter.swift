@@ -9,23 +9,37 @@
 import Foundation
 
 class ShopCellPresenter {
-    private var shopItem: ShopItem
-    
-    init(item: ShopItem) {
-        shopItem = item
-    }
     
     var name: String {
         return shopItem.name
     }
     var price: String {
-        return shopItem.price.description
+        return shopItem.price.description + "$"
     }
     var quantity: String {
         return shopItem.quantity
     }
     var amount: String {
         return shopItem.amount.description
+    }
+    
+    var amountDecimal: Decimal {
+        return shopItem.amount
+    }
+    
+    var sum: String {
+        let sumDec = shopItem.amount * shopItem.price
+        return sumDec.description + "$"
+    }
+    
+    var sumDecimal: Decimal {
+        return shopItem.amount * shopItem.price
+    }
+    
+    private var shopItem: ShopItem
+    
+    init(item: ShopItem) {
+        shopItem = item
     }
     
     func subtractProduct() -> String {

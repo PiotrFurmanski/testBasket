@@ -11,25 +11,22 @@ import UIKit
 class ShopViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    private let presenter = ShopPresenter(service: CurrencyService())
+    private let presenter = ShopPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         presenter.attach(view: self)
         presenter.setupData()
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-    
-    @IBAction func checkoutClicked() {
-        presenter.loadCurrencies()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVc = segue.destination as? BasketViewController {
+            destVc.presenter = BasketPresenter(service: CurrencyService(),
+                                               shopItems: presenter.shopItems)
+        }
+    }
 
-}
-
-extension ShopViewController: UITableViewDelegate {
-    
 }
 
 extension ShopViewController: UITableViewDataSource {
