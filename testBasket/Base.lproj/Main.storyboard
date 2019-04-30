@@ -10,36 +10,131 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Shop View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testBasket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShopViewController" customModule="testBasket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-PM-63G">
+                                <rect key="frame" x="0.0" y="44" width="414" height="780"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShopViewCell" id="4BD-ax-IJf" customClass="ShopViewCell" customModule="testBasket" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4BD-ax-IJf" id="pUU-4s-qE8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-59-adz">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="nFp-fW-vhQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="56" height="22"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="tR8-DZ-Ckz">
+                                                            <rect key="frame" x="84" y="0.0" width="37.5" height="22"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Bvd-G4-Od4">
+                                                            <rect key="frame" x="149.5" y="0.0" width="56" height="22"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vcG-yB-kYy">
+                                                            <rect key="frame" x="234" y="0.0" width="74.5" height="22"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                        </textField>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="haI-pi-few">
+                                                            <rect key="frame" x="336.5" y="0.0" width="37.5" height="22"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-1A-oXu">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="19" height="22"/>
+                                                                    <state key="normal" title="-"/>
+                                                                    <connections>
+                                                                        <action selector="subtractProduct:" destination="4BD-ax-IJf" eventType="touchUpInside" id="QTV-qP-KFf"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xW-gQ-0Re">
+                                                                    <rect key="frame" x="19" y="0.0" width="18.5" height="22"/>
+                                                                    <state key="normal" title="+"/>
+                                                                    <connections>
+                                                                        <action selector="addProduct:" destination="4BD-ax-IJf" eventType="touchUpInside" id="d7X-8m-zZw"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="1xW-gQ-0Re" firstAttribute="width" secondItem="haI-pi-few" secondAttribute="width" multiplier="0.5" id="Myt-3V-J6I"/>
+                                                                <constraint firstItem="Pzv-1A-oXu" firstAttribute="width" secondItem="haI-pi-few" secondAttribute="width" multiplier="0.5" id="hiv-E8-VhE"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="nFp-fW-vhQ" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.15" id="5bl-3g-YzJ"/>
+                                                        <constraint firstItem="tR8-DZ-Ckz" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.1" id="V9A-DZ-bsn"/>
+                                                        <constraint firstItem="vcG-yB-kYy" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.2" id="YGE-EL-34h"/>
+                                                        <constraint firstItem="haI-pi-few" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.1" id="eKv-to-lFZ"/>
+                                                        <constraint firstItem="Bvd-G4-Od4" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.15" id="qZ7-Ga-q4i"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gnM-59-adz" secondAttribute="bottom" id="KRu-At-Cxt"/>
+                                                <constraint firstItem="gnM-59-adz" firstAttribute="leading" secondItem="pUU-4s-qE8" secondAttribute="leadingMargin" id="b98-PC-DP0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gnM-59-adz" secondAttribute="trailing" id="gJB-Ju-Pk8"/>
+                                                <constraint firstItem="gnM-59-adz" firstAttribute="top" secondItem="pUU-4s-qE8" secondAttribute="topMargin" id="ghB-S0-nob"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountTextField" destination="vcG-yB-kYy" id="mU4-9m-N9b"/>
+                                            <outlet property="name" destination="nFp-fW-vhQ" id="6eR-f0-iko"/>
+                                            <outlet property="price" destination="tR8-DZ-Ckz" id="B6c-Xb-P5E"/>
+                                            <outlet property="quantity" destination="Bvd-G4-Od4" id="iNM-xG-Ak3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-qk-nKl">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <rect key="frame" x="167" y="832" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OuX-eM-fHW"/>
-                                    <constraint firstAttribute="width" constant="46" id="dfx-Iz-z5I"/>
+                                    <constraint firstAttribute="width" constant="80" id="dfx-Iz-z5I"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Checkout"/>
                                 <connections>
-                                    <action selector="clickButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yju-PA-GV8"/>
+                                    <action selector="checkoutClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYW-r4-ToW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rqa-qk-nKl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T8i-Db-wip"/>
+                            <constraint firstItem="AcT-PM-63G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fdg-9i-4em"/>
+                            <constraint firstItem="AcT-PM-63G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IQI-zL-gby"/>
+                            <constraint firstItem="rqa-qk-nKl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KzG-Wf-6cN"/>
+                            <constraint firstItem="AcT-PM-63G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MmX-PL-oJ3"/>
                             <constraint firstItem="rqa-qk-nKl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zcs-u9-fiB"/>
+                            <constraint firstItem="rqa-qk-nKl" firstAttribute="top" secondItem="AcT-PM-63G" secondAttribute="bottom" constant="8" id="zGY-di-4r3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="AcT-PM-63G" id="pXE-rX-p0T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="134.59821428571428"/>
         </scene>
     </scenes>
 </document>
