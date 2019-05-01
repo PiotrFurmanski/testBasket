@@ -10,6 +10,11 @@ import Foundation
 
 class ShopCellPresenter {
     
+    private struct Constant {
+        static let minAmount = Decimal(string: "0")!
+        static let maxAmount = Decimal(string: "9999")!
+    }
+    
     var name: String {
         return shopItem.name
     }
@@ -41,13 +46,14 @@ class ShopCellPresenter {
         shopItem = item
     }
     
-    func subtractProduct() -> String {
-        guard shopItem.amount > 0 else { return shopItem.amount.description }
+    @discardableResult func subtractProduct() -> String {
+        guard shopItem.amount > Constant.minAmount else { return shopItem.amount.description }
         shopItem.amount -= 1
         return shopItem.amount.description
     }
     
-    func addProduct() -> String {
+    @discardableResult func addProduct() -> String {
+        guard shopItem.amount < Constant.maxAmount else { return shopItem.amount.description }
         shopItem.amount += 1
         return shopItem.amount.description
     }

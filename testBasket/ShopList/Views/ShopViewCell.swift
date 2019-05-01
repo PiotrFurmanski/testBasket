@@ -28,6 +28,7 @@ class ShopViewCell: UITableViewCell {
         price.text = presenter.price
         quantity.text = presenter.quantity
         amountTextField.text = presenter.amount
+        amountTextField.delegate = self
     }
     
     @IBAction func subtractProduct(_ sender: Any) {
@@ -40,6 +41,7 @@ class ShopViewCell: UITableViewCell {
     
     @objc func doneButtonTapped() {
         guard let text = amountTextField.text,
+            text.first != "0",
             let amountDec = Decimal(string: text),
             amountDec >= 0
         else {
@@ -56,4 +58,10 @@ class ShopViewCell: UITableViewCell {
         amountTextField.resignFirstResponder()
     }
     
+}
+
+extension ShopViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        doneButtonTapped()
+    }
 }

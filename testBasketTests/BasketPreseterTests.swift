@@ -9,10 +9,6 @@
 import XCTest
 @testable import testBasket
 
-enum CustomError: Error {
-    case runtimeError(String)
-}
-
 class BasketPreseterTests: XCTestCase {
     
     override func setUp() {
