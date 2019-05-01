@@ -28,7 +28,7 @@ class CurrencyService: CurrencyServiceProtocol {
         task.resume()
     }
     
-    func handleResponse(data: Data?, response: URLResponse?, error: Error?,
+    private func handleResponse(data: Data?, response: URLResponse?, error: Error?,
                         completion: @escaping (_ currencyPairs: CurrencyPairs?, _ error: Error?) -> ()) {
         guard error == nil else {
             completion(nil, error)

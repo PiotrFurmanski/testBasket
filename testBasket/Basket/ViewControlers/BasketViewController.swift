@@ -12,6 +12,7 @@ class BasketViewController: UIViewController {
 
     private struct Constant {
         static let cellWidth = 80
+        static let cellMargin = 10
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -73,7 +74,7 @@ extension BasketViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         let totalCellWidth = Constant.cellWidth * collectionView.numberOfItems(inSection: 0)
-        let totalSpacingWidth = 10 * (collectionView.numberOfItems(inSection: 0) - 1)
+        let totalSpacingWidth = Constant.cellMargin * (collectionView.numberOfItems(inSection: 0) - 1)
         
         let leftInset = (collectionView.layer.frame.size.width - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
         let rightInset = leftInset
