@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-PM-63G">
-                                <rect key="frame" x="0.0" y="88" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="710"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShopViewCell" id="4BD-ax-IJf" customClass="ShopViewCell" customModule="testBasket" customModuleProvider="target">
@@ -39,19 +39,19 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="tR8-DZ-Ckz">
-                                                            <rect key="frame" x="84" y="0.0" width="37.5" height="22"/>
+                                                            <rect key="frame" x="79.5" y="0.0" width="56" height="22"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Bvd-G4-Od4">
-                                                            <rect key="frame" x="149.5" y="0.0" width="56" height="22"/>
+                                                            <rect key="frame" x="159" y="0.0" width="56" height="22"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vcG-yB-kYy">
-                                                            <rect key="frame" x="234" y="0.0" width="74.5" height="22"/>
+                                                            <rect key="frame" x="238.5" y="0.0" width="74.5" height="22"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -82,7 +82,7 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="nFp-fW-vhQ" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.15" id="5bl-3g-YzJ"/>
-                                                        <constraint firstItem="tR8-DZ-Ckz" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.1" id="V9A-DZ-bsn"/>
+                                                        <constraint firstItem="tR8-DZ-Ckz" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.15" id="V9A-DZ-bsn"/>
                                                         <constraint firstItem="vcG-yB-kYy" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.2" id="YGE-EL-34h"/>
                                                         <constraint firstItem="haI-pi-few" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.1" id="eKv-to-lFZ"/>
                                                         <constraint firstItem="Bvd-G4-Od4" firstAttribute="width" secondItem="gnM-59-adz" secondAttribute="width" multiplier="0.15" id="qZ7-Ga-q4i"/>
@@ -110,7 +110,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-qk-nKl">
-                                <rect key="frame" x="157" y="822" width="100" height="40"/>
+                                <rect key="frame" x="157" y="806" width="100" height="40"/>
                                 <color key="backgroundColor" red="0.3411764705882353" green="0.83529411764705885" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="OuX-eM-fHW"/>
@@ -134,9 +134,9 @@
                         <constraints>
                             <constraint firstItem="AcT-PM-63G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fdg-9i-4em"/>
                             <constraint firstItem="AcT-PM-63G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IQI-zL-gby"/>
-                            <constraint firstItem="rqa-qk-nKl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KzG-Wf-6cN"/>
                             <constraint firstItem="AcT-PM-63G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MmX-PL-oJ3"/>
                             <constraint firstItem="rqa-qk-nKl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zcs-u9-fiB"/>
+                            <constraint firstAttribute="bottom" secondItem="rqa-qk-nKl" secondAttribute="bottom" constant="50" id="nWm-Vy-CeS"/>
                             <constraint firstItem="rqa-qk-nKl" firstAttribute="top" secondItem="AcT-PM-63G" secondAttribute="bottom" constant="8" id="zGY-di-4r3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -323,6 +323,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="80k-wg-Si3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

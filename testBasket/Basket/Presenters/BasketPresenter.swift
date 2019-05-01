@@ -31,7 +31,7 @@ class BasketPresenter {
     
     var totalAmount: String {
         let sum = selectedItems.map({ $0.sumDecimal }).reduce(0,+)
-        return "Total amount: " + (formatter.string(from: sum as NSDecimalNumber) ?? "") + "$"
+        return "Total amount: " + (NumberFormatter.currencyFormatter.string(from: sum as NSDecimalNumber) ?? "") + " $"
     }
     
     var totalAmountDecimal: Decimal {
@@ -61,19 +61,11 @@ class BasketPresenter {
     
     func calculateAmount(for currency: CurrencyPairModel) -> String {
         let sum = selectedItems.map({ $0.sumDecimal * currency.ratio }).reduce(0,+)
-        return "Total amount: " + (formatter.string(from: sum as NSDecimalNumber) ?? "") + " " + currency.currencyName
+        return "Total amount: " + (NumberFormatter.currencyFormatter.string(from: sum as NSDecimalNumber) ?? "") + " " + currency.currencyName
     }
     
     func attach(view: BasketView) {
         self.basketView = view
-    }
-    
-    private var formatter: NumberFormatter {
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.usesGroupingSeparator = true
-        currencyFormatter.numberStyle = .currency
-        currencyFormatter.locale = Locale.current
-        return currencyFormatter
     }
     
     private func setupCurrencies(pairs: CurrencyPairs) {

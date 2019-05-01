@@ -14,7 +14,7 @@ class ShopCellPresenter {
         return shopItem.name
     }
     var price: String {
-        return shopItem.price.description + "$"
+        return shopItem.price.description + " $"
     }
     var quantity: String {
         return shopItem.quantity
@@ -28,8 +28,7 @@ class ShopCellPresenter {
     }
     
     var sum: String {
-        let sumDec = shopItem.amount * shopItem.price
-        return sumDec.description + "$"
+        return (NumberFormatter.currencyFormatter.string(from: sumDecimal as NSDecimalNumber) ?? "") + " $"
     }
     
     var sumDecimal: Decimal {
