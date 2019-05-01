@@ -39,21 +39,22 @@ class BasketPresenter {
     }
     
     private var shopItems = [ShopCellPresenter]()
-    private let currencyService: CurrencyService
+    private let currencyService: CurrencyServiceProtocol
     private weak var basketView: BasketView?
     
-    init(service: CurrencyService, shopItems: [ShopCellPresenter]) {
+    init(service: CurrencyServiceProtocol, shopItems: [ShopCellPresenter]) {
         currencyService = service
         self.shopItems = shopItems
     }
     
-    func loadCurrencies() {
+    func loadCurrencies(completion: (() -> ())? = nil) {
         DispatchQueue.global(qos: .background).async { [weak self] in
             self?.currencyService.loadCurrencyRates { (currencyPairs, error) in
                 DispatchQueue.main.async {
                     guard let currencyPairs = currencyPairs, error == nil else { return }
                     self?.setupCurrencies(pairs: currencyPairs)
                     self?.basketView?.reloadData()
+                    completion?()
                 }
             }
         }

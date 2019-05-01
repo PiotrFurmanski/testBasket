@@ -53,7 +53,7 @@ class ShopCellPresenter {
     }
     
     func clearAmount() -> String {
-        shopItem.amount = Decimal(floatLiteral: 0)
+        shopItem.amount = Decimal(string: "0")!
         return shopItem.amount.description
     }
     

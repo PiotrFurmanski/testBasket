@@ -8,7 +8,11 @@
 
 import Foundation
 
-class CurrencyService {
+protocol CurrencyServiceProtocol: class {
+    func loadCurrencyRates(completion: @escaping (_ currencyPairs: CurrencyPairs?, _ error: Error?) -> ())
+}
+
+class CurrencyService: CurrencyServiceProtocol {
     
     private struct Constant {
         static let accesKey = "a23267780d72bb4bf4da78d79eb3d80e"

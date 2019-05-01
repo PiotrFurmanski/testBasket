@@ -23,11 +23,12 @@
 		6F8A4D8522765A24009E2865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A4D8322765A24009E2865 /* Main.storyboard */; };
 		6F8A4D8722765A26009E2865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A4D8622765A26009E2865 /* Assets.xcassets */; };
 		6F8A4D8A22765A26009E2865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A4D8822765A26009E2865 /* LaunchScreen.storyboard */; };
-		6F8A4D9522765A26009E2865 /* testBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A4D9422765A26009E2865 /* testBasketTests.swift */; };
-		6F8A4DA022765A26009E2865 /* testBasketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A4D9F22765A26009E2865 /* testBasketUITests.swift */; };
+		6F8A4D9522765A26009E2865 /* BasketPreseterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A4D9422765A26009E2865 /* BasketPreseterTests.swift */; };
 		6F8A4DB022765E82009E2865 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A4DAF22765E82009E2865 /* CurrencyService.swift */; };
 		6F8A4DB22276600C009E2865 /* CurrencyPairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A4DB12276600C009E2865 /* CurrencyPairs.swift */; };
 		6F8A4DB42276695D009E2865 /* ShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A4DB32276695D009E2865 /* ShopPresenter.swift */; };
+		6FC2093A2279B15000AF8DB3 /* CurrencyServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC209392279B15000AF8DB3 /* CurrencyServiceMock.swift */; };
+		6FC2093C2279B4BA00AF8DB3 /* BasketViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC2093B2279B4BA00AF8DB3 /* BasketViewMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,14 +68,14 @@
 		6F8A4D8922765A26009E2865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F8A4D8B22765A26009E2865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8A4D9022765A26009E2865 /* testBasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testBasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F8A4D9422765A26009E2865 /* testBasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testBasketTests.swift; sourceTree = "<group>"; };
+		6F8A4D9422765A26009E2865 /* BasketPreseterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPreseterTests.swift; sourceTree = "<group>"; };
 		6F8A4D9622765A26009E2865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8A4D9B22765A26009E2865 /* testBasketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testBasketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F8A4D9F22765A26009E2865 /* testBasketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testBasketUITests.swift; sourceTree = "<group>"; };
-		6F8A4DA122765A26009E2865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F8A4DAF22765E82009E2865 /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		6F8A4DB12276600C009E2865 /* CurrencyPairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairs.swift; sourceTree = "<group>"; };
 		6F8A4DB32276695D009E2865 /* ShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopPresenter.swift; sourceTree = "<group>"; };
+		6FC209392279B15000AF8DB3 /* CurrencyServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyServiceMock.swift; sourceTree = "<group>"; };
+		6FC2093B2279B4BA00AF8DB3 /* BasketViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +200,6 @@
 			children = (
 				6F8A4D7E22765A24009E2865 /* testBasket */,
 				6F8A4D9322765A26009E2865 /* testBasketTests */,
-				6F8A4D9E22765A26009E2865 /* testBasketUITests */,
 				6F8A4D7D22765A24009E2865 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -232,19 +232,11 @@
 		6F8A4D9322765A26009E2865 /* testBasketTests */ = {
 			isa = PBXGroup;
 			children = (
-				6F8A4D9422765A26009E2865 /* testBasketTests.swift */,
+				6FC209382279AFEF00AF8DB3 /* Mocks */,
+				6F8A4D9422765A26009E2865 /* BasketPreseterTests.swift */,
 				6F8A4D9622765A26009E2865 /* Info.plist */,
 			);
 			path = testBasketTests;
-			sourceTree = "<group>";
-		};
-		6F8A4D9E22765A26009E2865 /* testBasketUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6F8A4D9F22765A26009E2865 /* testBasketUITests.swift */,
-				6F8A4DA122765A26009E2865 /* Info.plist */,
-			);
-			path = testBasketUITests;
 			sourceTree = "<group>";
 		};
 		6F8A4DAD22765AC5009E2865 /* Services */ = {
@@ -261,6 +253,15 @@
 				6F3EA24C2277B0CD009F6354 /* ShopItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6FC209382279AFEF00AF8DB3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6FC209392279B15000AF8DB3 /* CurrencyServiceMock.swift */,
+				6FC2093B2279B4BA00AF8DB3 /* BasketViewMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,7 +418,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F8A4D9522765A26009E2865 /* testBasketTests.swift in Sources */,
+				6FC2093C2279B4BA00AF8DB3 /* BasketViewMock.swift in Sources */,
+				6FC2093A2279B15000AF8DB3 /* CurrencyServiceMock.swift in Sources */,
+				6F8A4D9522765A26009E2865 /* BasketPreseterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +428,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F8A4DA022765A26009E2865 /* testBasketUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
