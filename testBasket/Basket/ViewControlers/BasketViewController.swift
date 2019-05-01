@@ -18,6 +18,7 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sumLabel: UILabel!
+    @IBOutlet weak var actvityIndicator: UIActivityIndicatorView!
     
     var presenter: BasketPresenter?
     
@@ -91,5 +92,6 @@ extension BasketViewController: UICollectionViewDelegateFlowLayout {
 extension BasketViewController: BasketView {
     func reloadData() {
         collectionView.reloadData()
+        actvityIndicator.stopAnimating()
     }
 }

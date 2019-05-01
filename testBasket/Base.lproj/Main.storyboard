@@ -284,6 +284,9 @@
                                     <outlet property="delegate" destination="yws-u8-sU1" id="3bh-zz-1RA"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eMX-c5-oHN">
+                                <rect key="frame" x="197" y="466.5" width="20" height="20"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsg-Xe-8Rh">
                                 <rect key="frame" x="10" y="506.5" width="394" height="60"/>
                                 <constraints>
@@ -296,6 +299,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="eMX-c5-oHN" firstAttribute="centerY" secondItem="Xxs-qV-ZaV" secondAttribute="centerY" id="254-MR-Syc"/>
+                            <constraint firstItem="eMX-c5-oHN" firstAttribute="centerX" secondItem="Xxs-qV-ZaV" secondAttribute="centerX" id="4Dq-la-9bu"/>
                             <constraint firstItem="61n-vS-Bac" firstAttribute="leading" secondItem="T0M-qI-tkm" secondAttribute="leading" id="A0y-Bj-z9K"/>
                             <constraint firstItem="Xxs-qV-ZaV" firstAttribute="trailing" secondItem="T0M-qI-tkm" secondAttribute="trailing" id="A5M-Yi-gXk"/>
                             <constraint firstItem="Xxs-qV-ZaV" firstAttribute="top" secondItem="61n-vS-Bac" secondAttribute="bottom" constant="10" id="MIW-DU-ALd"/>
@@ -311,6 +316,7 @@
                         <viewLayoutGuide key="safeArea" id="T0M-qI-tkm"/>
                     </view>
                     <connections>
+                        <outlet property="actvityIndicator" destination="eMX-c5-oHN" id="JCJ-Hf-hub"/>
                         <outlet property="collectionView" destination="Xxs-qV-ZaV" id="NxB-ud-Zaq"/>
                         <outlet property="sumLabel" destination="lsg-Xe-8Rh" id="HaT-hj-u09"/>
                         <outlet property="tableView" destination="61n-vS-Bac" id="DFh-7W-Hbt"/>
